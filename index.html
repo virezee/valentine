@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<audio id="audio">
+  <source src="audio.mp3" type="audio/mp3">
+</audio>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yvonne</title>
+</head>
+<body>
+  <h1>Hi Yvonne!</h1>
+  <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
+  <h2>Mau ga jadi couple ak?</h2>
+  <button id="btn_mau" onclick="alert('I LOVE YOU ❤❤')">Mau</button>&nbsp;
+  <button id="btn_gamau" onclick="gamau(this)" style="position: absolute">Gamau</button>
+</body>
+<script>
+  const audio = document.getElementById("audio");
+  const playAudio = () => {
+    audio.play();
+  };
+  window.addEventListener("mouseover", playAudio);
+  window.addEventListener("click", playAudio);
+  window.addEventListener("contextmenu", playAudio);
+  window.addEventListener("scroll", playAudio);
+  window.addEventListener("touchmove", playAudio);
+  audio.addEventListener("ended", playAudio);
+  const gamau = (id) => {
+    const mau = document.getElementById("btn_mau");
+    const i = Math.floor(Math.random() * 246) + 55;
+    const j = Math.floor(Math.random() * 100) + mau.offsetTop;
+    id.style.left = i + "px";
+    id.style.top = j + "px";
+  }
+</script>
+</html>
